@@ -1,0 +1,172 @@
+/* Layout (same structure as Dashboard) */
+.overview-container {
+  display: flex;
+  height: 100vh;
+  font-family: sans-serif;
+  background: #fffdf5;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #fffacd;
+  width: 220px;
+  padding: 1rem;
+  border-right: 1px solid #ccc;
+  height: 100%;
+}
+
+.logo {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.sidebar-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+/* Header summary */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.monthly-summary span {
+  margin-left: 1rem;
+}
+
+.income {
+  color: green;
+}
+
+.expense {
+  color: red;
+}
+
+/* Grouped Transactions */
+.date-group {
+  margin-bottom: 1.5rem;
+}
+
+.date-group h4 {
+  color: #ff8c00;
+  margin-bottom: 0.5rem;
+}
+
+.transaction-group {
+  list-style: none;
+  padding: 0;
+  margin-left: 1rem;
+  border-left: 3px solid #ffeb99;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background: #fffacd;
+  margin-bottom: 0.3rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* Empty state */
+.empty-msg {
+  color: #777;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* FAB Buttons */
+.fab-buttons {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-btn, .minus-btn {
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+}
+
+.add-btn {
+  background-color: green;
+}
+
+.minus-btn {
+  background-color: red;
+}
+/* Top toggle + monthly summary bar */
+.top-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff3b0;
+  padding: 0.5rem 1rem;
+  border-radius: 6px 6px 0 0;
+}
+
+.nav-arrow {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #c76c00;
+  cursor: pointer;
+}
+
+.toggle-tabs {
+  display: flex;
+  background: #fff3b0;
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+.tab {
+  flex: 1;
+  padding: 0.75rem;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  font-weight: bold;
+}
+
+.tab.active {
+  background: #f4c57b;
+  border-bottom: 3px solid #ffa500;
+}
+
+.monthly-summary-row {
+  display: flex;
+  justify-content: space-around;
+  background: #fff3b0;
+  padding: 0.5rem 0;
+  border-radius: 0 0 6px 6px;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,206 @@
+/* Layout */
+.overview-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    font-family: sans-serif;
+    background: #fffdf5;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #fffacd;
+    width: 220px;
+    padding: 1rem;
+    border-right: 1px solid #ccc;
+    height: 100%;
+}
+
+.logo {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.sidebar-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+    padding: 1.5rem;
+    background: #fffdf5;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Calendar Navigation */
+.calendar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.calendar-nav button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #c76c00;
+    cursor: pointer;
+}
+
+/* Weekdays Row */
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 1rem;
+}
+
+.weekday {
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 0;
+    color: #555;
+}
+
+/* Calendar Grid */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+    margin-top: 1rem;
+}
+
+/* Calendar Day Styling */
+.calendar-day {
+    text-align: center;
+    padding: 10px;
+    background-color: #fff8c6;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect on day */
+.calendar-day:hover {
+    background-color: #ffec99;
+}
+
+/* Selected day styling */
+.calendar-day.selected {
+    background-color: #ffb74d;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Transaction Indicator (dot) */
+.transaction-indicator {
+    color: #ff0000;
+    font-size: 18px;
+    margin-top: 5px;
+    transition: transform 0.3s;
+}
+
+/* Transaction Indicator hover */
+.calendar-day:hover .transaction-indicator {
+    transform: scale(1.2);
+}
+
+/* Selected Date Info */
+.selected-date-info {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #fffacd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Header inside selected date info */
+.selected-date-info h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.transaction-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Transaction List Item Styling */
+.transaction-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background: #fffacd;
+    margin-bottom: 0.3rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Income and Expense Styling */
+.income {
+    color: green;
+}
+
+.expense {
+    color: red;
+}
+
+/* No transactions message */
+.no-transactions-message {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #555;
+    text-align: center;
+}
+
+/* FAB Buttons */
+.fab-buttons {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-btn,
+.minus-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+}
+
+.add-btn {
+    background-color: green;
+}
+
+.minus-btn {
+    background-color: red;
+}

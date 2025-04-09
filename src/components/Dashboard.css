@@ -1,0 +1,184 @@
+/* Global Fix */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* Layout */
+.overview-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw; /* Use full screen width */
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.sidebar {
+  background-color: #fffacd;
+  width: 220px;
+  padding: 1rem;
+  border-right: 1px solid #ccc;
+  height: 100%;
+  position: relative; /* Ensure proper stacking context */
+  z-index: 10; /* Ensure it's above other content */
+}
+
+.logo {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.sidebar-link {
+  text-decoration: none;
+  color: inherit;
+  z-index: 11; /* Ensure links are clickable above other elements */
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 1.5rem;
+  background: #fffdf5;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  margin-bottom: 1rem;
+}
+
+/* Top Row */
+.top-row {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.summary-card, .chart-card, .goal-card {
+  background-color: #fffacd;
+  padding: 1rem;
+  border-radius: 10px;
+  flex: 1;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.income {
+  color: green;
+}
+
+.expense {
+  color: red;
+}
+
+.bar-placeholder, .pie-placeholder {
+  height: 150px;
+  background: #f0f0f0;
+  border-radius: 8px;
+  margin-top: 1rem;
+  text-align: center;
+  line-height: 150px;
+  color: #888;
+}
+
+/* Bottom Row */
+.bottom-row {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.budget-card, .transactions-card {
+  background-color: #fffacd;
+  padding: 1rem;
+  border-radius: 10px;
+  flex: 1;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+.budget-item {
+  margin: 0.5rem 0;
+}
+
+.budget-bar {
+  background: #ddd;
+  height: 10px;
+  border-radius: 5px;
+  margin: 5px 0;
+  overflow: hidden;
+}
+
+.filled {
+  height: 100%;
+  background: linear-gradient(to right, red, green);
+}
+
+.budget-percent {
+  font-size: 0.85rem;
+  float: right;
+}
+
+.transactions-list {
+  list-style: none;
+  padding: 0;
+}
+
+.transactions-list li {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+}
+
+/* FAB Buttons */
+.fab-buttons {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-btn, .minus-btn {
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+}
+
+.add-btn {
+  background-color: green;
+}
+
+.minus-btn {
+  background-color: red;
+}
+
+.sidebar-link {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  z-index: 11; /* Ensure links are above other content */
+}
